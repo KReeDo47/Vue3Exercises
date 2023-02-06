@@ -8,28 +8,35 @@
   font-weight: normal;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
+.body {
+  height: 100%;
+  width: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;;
+}
+.main {  
+  display:flex;
+  align-items: center;
+  justify-content: center;;
+  width: 250px;
+  height: 250px;
+  background-color: aqua;
+  border-radius: 40px;
+  margin-left: 30px;
+}
+.page {  
+  display:flex;
+  align-items: center;
+  justify-content: center;;
+  width: 25px;
+  height: 25px;
+  background-color: greenyellow;
+  border-radius: 40px;
+  margin-left: 30px;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+p {
+  color: black;
+  font-size: large;
 }
