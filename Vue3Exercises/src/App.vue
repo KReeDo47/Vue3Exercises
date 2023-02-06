@@ -2,8 +2,10 @@
   export default {
     data() {
       return {
-        text: 'page',
-        href: 'page.html',
+       num: 5,
+       num: 1,
+       num: 2,
+       num: 3,
       }
     }
   }
@@ -12,8 +14,11 @@
 <template>
   <div class="body">
     <div class="main"> 
-      <a :href="page">Tap here)</a>
+      <p>{{ num ** 2 }}</p>
     </div>
-  </div>    
+    <div class="main">
+      <p>{{ num1 + num2 + num3 }}</p> 
+    </div> 
+  </div>     
 </template>
 
