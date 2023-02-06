@@ -1,13 +1,17 @@
 <script>
   export default {
-    data() {},
+    data() {
+      return {
+        num1: 1,
+        num2: 2,
+      };
+    },
     methods: {
       show: function () {
-        var date = new Date();
-        alert(date);
-      }
-    }
-  }
+
+      },
+    },
+  };  
 </script>
 
 <template>
@@ -15,9 +19,6 @@
     <div class="main">
       <button @click="show()">This place</button>
     </div>
-    <div class="main">
-      <button v-on:mousover="show()">Come here</button>
-    </div>    
   </div>     
 </template>
 
