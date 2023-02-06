@@ -11,10 +11,13 @@
 </script>
 
 <template>
-  {{ show() }}
   <div class="body">
-    
-    <div class="main"></div>
+    <div class="main">
+      <button @click="show()">This place</button>
+    </div>
+    <div class="main">
+      <button v-on:mousover="show()">Come here</button>
+    </div>    
   </div>     
 </template>
 
