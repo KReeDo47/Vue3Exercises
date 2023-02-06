@@ -1,14 +1,18 @@
 <script>
   export default {
     name: 'App',
+    data() {
+      return {
+        name: 'Ali',
+        surn: 'Dzelyalov',
+      }
+    }
   }
 </script>
 
 <template>
-  <div>
-    <h1> Hello World! </h1>
-    <p> There should be some text with tags. </p>
-  </div>
+  <div> {{name}} </div>
+  <div> {{surn}} </div>
 </template>
 
 <style scoped>
