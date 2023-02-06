@@ -20,5 +20,6 @@
       <button @click="show()">This place</button>
     </div>
   </div>     
+
 </template>
 
