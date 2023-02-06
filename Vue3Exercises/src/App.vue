@@ -2,10 +2,8 @@
   export default {
     data() {
       return {
-       num: 5,
-       num: 1,
-       num: 2,
-       num: 3,
+       arr1: ["x", "y", "z"],
+       arr2: [1, 2, 3],
       }
     }
   }
@@ -14,10 +12,12 @@
 <template>
   <div class="body">
     <div class="main"> 
-      <p>{{ num ** 2 }}</p>
+      <p>{{ arr1[0] }}</p>
+      <p>{{ arr1[1] }}</p>
+      <p>{{ arr1[2] }}</p>
     </div>
     <div class="main">
-      <p>{{ num1 + num2 + num3 }}</p> 
+      <p>{{ arr2[0] + arr2[1] + arr2[2] }}</p> 
     </div> 
   </div>     
 </template>
