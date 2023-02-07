@@ -1,9 +1,16 @@
 <script>
   export default {
-    data() {},
+    data() {
+      return {
+        text: "Ali",
+      };
+    },
     methods: {
-      show: function (x) {
-        alert(x ** 2);
+      change: function (i) {
+        this.text = this.text + " " + "Ali";
+      },
+      achange: function (i) {
+        this.text = "Ali";
       },
     },
   };  
@@ -12,10 +19,13 @@
 <template>
   <div class="body">
     <div class="main">
-      <button @click="show(2)">2</button>
+      <p>{{ text }}</p>
+    </div>
+    <div class="main">  
+      <button @click="change(text)">+</button>
     </div>
     <div class="main">
-      <button @click="show(3)">3</button>
+      <button @click="achange(text)">-</button>
     </div>   
   </div>     
 </template>
