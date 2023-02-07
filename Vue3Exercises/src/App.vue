@@ -2,16 +2,19 @@
   export default {
     data() {
       return {
-        text: "Ali",
+        cost: "85",
+        amount: "15",
       };
     },
     methods: {
       change: function (i) {
-        this.text = this.text + " " + "Ali";
+        this.cost = this.cost + 1;
       },
-      achange: function (i) {
-        this.text = "Ali";
-      },
+    },
+    computed: {
+      price: function() {
+        return this.cost * this.amount;
+      }, 
     },
   };  
 </script>
@@ -19,14 +22,13 @@
 <template>
   <div class="body">
     <div class="main">
-      <p>{{ text }}</p>
-    </div>
-    <div class="main">  
-      <button @click="change(text)">+</button>
-    </div>
-    <div class="main">
-      <button @click="achange(text)">-</button>
+      <p>{{ cost }}</p>
+      <p>{{ amount }}</p>
+      <p>{{ price }}</p>
     </div>   
+    <div class="main">
+      <button @click="change(cost)">+</button>
+    </div>  
   </div>     
 </template>
 
