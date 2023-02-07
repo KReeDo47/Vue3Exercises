@@ -7,28 +7,24 @@
       };
     },
     methods: {
-      change: function (i) {
-        this.cost = this.cost + 1;
-      },
+    haha: function (i) {
+      alert("haha");
+      return false;
     },
-    computed: {
-      price: function() {
-        return this.cost * this.amount;
-      }, 
-    },
-  };  
+  },
+}; 
 </script>
 
 <template>
   <div class="body">
     <div class="main">
-      <p>{{ cost }}</p>
-      <p>{{ amount }}</p>
-      <p>{{ price }}</p>
+      <a href="fake.html" v-on:click.prevent>
+        <p>Tap here and nothing will happen</p></a>
     </div>   
     <div class="main">
-      <button @click="change(cost)">+</button>
+      <button v-on:click.once="haha">haha</button>
     </div>  
   </div>     
 </template>
+
 
