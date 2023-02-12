@@ -1,25 +1,20 @@
 <script>
-  export default {
-    data() {
-      return {
-        shekel: true,
+  export default{
+    data(){
+      return{
+        isAuth: true,
       }
     },
     methods: {
-      Shekel: function() {
-        this.shekel = false;
+      Shekel: function(){
+        this.isAuth = false;
       }
     }
   }
 </script>
-
 <template>
   <button @click="Shekel">Shekel</button>
-  <div v-if="shekel">
-  <p>Greg</p>
-  <p>Ron</p>
-  <p>Kai</p>
-  </div>
+  <p v-show="isAuth">text</p>
 </template>
 
 <style>
