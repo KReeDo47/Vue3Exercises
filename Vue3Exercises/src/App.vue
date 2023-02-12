@@ -2,21 +2,19 @@
   export default {
     data() {
       return {
-        visible: true,
-      };
+        hidden1: true,
+        hidden2: false,
+      }
     },
-}; 
+  }
 </script>
 
 <template>
-  <div class="body">
-    <div class="main">
-      <p v-if="visible">Ali</p>
-    </div>   
-    <div class="main">
-      <p v-if="!visible">Ali</p>
-    </div>  
-  </div>     
+  <div v-if="hidden1">True</div>
+  <div v-if="!hidden2">False</div>
 </template>
+
+<style>
+</style>
 
 
