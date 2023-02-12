@@ -1,18 +1,26 @@
 <script>
-  export default{
-    data(){
-      return{
-        age: 25,
+  export default {
+    data() {
+      return {
+        shekel: true,
+      }
+    },
+    methods: {
+      Shekel: function() {
+        this.shekel = false;
       }
     }
   }
 </script>
-<template>
-  <p v-if="age < 18">подросток</p> 
-  <p v-else-if="19 < age && age < 25">молодой человек</p> 
-  <p v-else="age > 26">мужчина</p> 
-</template>
 
+<template>
+  <button @click="Shekel">Shekel</button>
+  <div v-if="shekel">
+  <p>Greg</p>
+  <p>Ron</p>
+  <p>Kai</p>
+  </div>
+</template>
 
 <style>
 </style>
