@@ -1,26 +1,47 @@
 <script>
 export default{
 data(){
-  return{
-    items: [1, 2, 3],
-  }
-},
-methods: {
+return{
+    hrefs: [
+    {href: '1.html',text: 'text1',},
+    {href: '2.html',text: 'text2',},
+    {href: '3.html',text: 'text3',},
+    ],
+    products: [
+    {
+        name: 'product1',
+        price: 100,
+        quantity: 5
+    },
+    {
+        name: 'product2',
+        price: 200,
+        quantity: 4
+    },
+    {
+        name: 'product3',
+        price: 300,
+        quantity: 3
+    },
+    ]
+}
 }
 }
 </script>
 
 <template>
-  <div v-for="elem in items">
-  <p class="hunter">{{ elem }}</p>
-  <p class="divider"> </p>
-  </div>
-  <br>
-  <ul class="styled" v-for="elem in items">
-    <li>{{ elem }}</li>
-    <li class="divider"> </li>
-  </ul>
+<ul class="styled">
+    <li v-for="link in hrefs"><a href="{{ link.href }}">{{ link.text }}</a></li>
+</ul>
+<br>
+<br>
+<table>
+    <tr v-for="col in products">
+    <td>{{ col.name }}</td>
+    <td>{{ col.price }}</td>
+    <td>{{ col.quantity }}</td>
+    </tr>
+</table>
 </template>
-
-<style scoped>
+<style>
 </style>
