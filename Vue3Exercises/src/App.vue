@@ -2,16 +2,21 @@
   export default{
     data(){
       return{
-        isAdmin: true,
+        day: 'Четверг',
       }
     }
   }
 </script>
-
 <template>
-  <p v-if="isAdmin">+++</p>
-  <p v-else>---</p>  
+  <p v-if="day === 'Понедельник'">Понедельник</p>
+  <p v-if="day === 'Вторник'">Вторник</p>
+  <p v-if="day === 'Среда'">Среда</p>
+  <p v-if="day === 'Четверг'">Четверг</p>
+  <p v-if="day === 'Пятница'">Пятница</p>
+  <p v-if="day === 'Суббота'">Суббота</p>
+  <p v-if="day === 'Воскресенье'">Воскресенье</p>
 </template>
+
 
 <style>
 </style>
