@@ -1,25 +1,30 @@
 <script>
 export default{
 data(){
-  return{
-    checked: true, 
-  }
-},
-methods: {
-Klark: function () {
-    this.checked = false;
-    this.visible = !this.visible;
-},
+return{
+    days: [],
+}
 }
 }
 </script>
 
 <template>
-<input class="text-field__input" type="checkbox" v-model="checked"> 
-<button @click="Klark">Klark</button>
-<p v-if="visible">{{ checked ? 'Green' : 'Wood' }}</p>
+<div>
+<input type="checkbox" v-model="days" value="Monday">
+<label>Monday</label>
+<br>
+<input type="checkbox" v-model="days" value="Thursday">
+<label>Thursday</label>
+<br>
+<input type="checkbox" v-model="days" value="Wednesday">
+<label>Wednesday</label>
+<ol>
+<li v-for="elem in days">{{ elem }}</li>
+</ol>
+</div>
+<br>
 </template>
 
 <style>
+  
 </style>
-
