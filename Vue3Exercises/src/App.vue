@@ -2,14 +2,17 @@
 export default{
 data(){
 return{
-  cssClasses: 'text',
+  obj: {
+    done: true,
+    selected: false,
+  },
 }
 }
 }
 </script>
 
 <template>
-<p: class="cssClasses">text</p>
+<p: class="obj">text</p>
 </template>
 
 <style>
