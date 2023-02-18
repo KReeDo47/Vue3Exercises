@@ -6,25 +6,33 @@ data(){
     anythings: ['1', '2', '3', '4'],
   }
 },
+<script>
+export default{
+data(){
+return{
+    ballon: '',
+    Ballon: ['Green', 'Wood', 'Grey'],
+}
+},
 methods: {
-  Add: function () {
-    this.anythings.unshift(this.New);
-  }
+removeBallon: function (index) {
+    this.Ballon.splice(index, 1);
+}
 }
 }
 </script>
 
 <template>
-<ul class="styled">
-  <li v-for="(anything, index) in 
-			anythings" :key="index">
-    {{ anything }}
-  </li>
+<ul>
+<li v-for="(item, index) in 
+			Ballon" :key="index">
+    {{ item }}
+    <br>
+    <button @click="removeBallon(index)">remove</button>
+</li>
 </ul>
-<input  v-model="New">
-<br>
-<button class="button" @click="Add">add</button>
 </template>
 
-<style scoped>
+<style>
+  
 </style>
