@@ -2,26 +2,22 @@
 export default{
 data(){
   return{
-    text: ' ',
-    conclave: ' ', 
+    checked: true, 
   }
 },
 methods: {
-list: function(){
-}
+Klark: function () {
+    this.checked = false;
+    this.visible = !this.visible;
+},
 }
 }
 </script>
 
 <template>
-<textarea class="text-field__input" v-model="text"></textarea>
-<p>{{ text }}</p>
-<br>
-<button @click="Ballon">Ballon</button>
-<ul>
-<li v-for="Text in text">{{ Text }}</li>
-</ul>
-
+<input class="text-field__input" type="checkbox" v-model="checked"> 
+<button @click="Klark">Klark</button>
+<p v-if="visible">{{ checked ? 'Green' : 'Wood' }}</p>
 </template>
 
 <style>
