@@ -1,17 +1,23 @@
 <script>
-  export default{
-    data(){
-      return{
-        isValid: true,
-        isDisabled: true,
-      }
-    }
+export default{
+data(){
+  return{
+message: 'Hello!',
+number: '13',
   }
+},
+methods: {
+}
+}
 </script>
+
 <template>
-  <p :class="{valid: isValid, disabled: isDisabled}">text</p>
+<input class="text-field__input" v-model="message">
+<p class="one" :style="{textTransform: 'uppercase'}">{{ message }}</p>
+<br>
+<input class="text-field__input" v-model="number">
+<p class="one">{{ number*number }}</p>
 </template>
 
-<style>
-  
+<style scoped>
 </style>
