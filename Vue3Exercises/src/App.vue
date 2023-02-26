@@ -16,7 +16,7 @@ export default {
         },
         {
           id: 3,
-          name: 'Ali',
+          name: 'A',
           surn: 'Dzelyalov'
         },
       ],
@@ -31,7 +31,7 @@ export default {
         return User.id !== id;
       })
     }
-  }
+  } 
 }
 </script>
 <template>
