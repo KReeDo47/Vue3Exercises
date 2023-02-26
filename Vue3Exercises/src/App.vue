@@ -6,13 +6,13 @@ export default {
       users: [
         {
           id: 1,
-          name: 'Oleg',
+          name: 'Ali',
           salary: 1000,
           age: 18
         },
         {
           id: 2,
-          name: 'Oleg',
+          name: 'Ali',
           salary: 2000,
           age: 15
         },
@@ -30,5 +30,5 @@ export default {
 </template>
 
 
-<style scoped>
+<style>
 </style>
