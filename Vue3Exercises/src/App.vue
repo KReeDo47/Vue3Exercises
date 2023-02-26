@@ -1,19 +1,34 @@
 <script>
-import Ali from './components/Employee.vue'
+import User from './components/Employee.vue'
 export default {
   data() {
     return {
-      name: 'Ali',
-      surn: 'Dzelyalov',
+      users: [
+        {
+          id: 1,
+          name: 'Oleg',
+          salary: 1000,
+          age: 18
+        },
+        {
+          id: 2,
+          name: 'Oleg',
+          salary: 2000,
+          age: 15
+        },
+      ],
     }
   },
-  components: { Ali }
+  components: {
+    User
+  }
 }
 </script>
 
 <template>
-<Ali :name="name" :surn="surn"/>
+<User v-for="User in users" :name="User.name" :salary="User.salary" :age="User.age" :key="User.id" />
 </template>
 
-<style>
+
+<style scoped>
 </style>
