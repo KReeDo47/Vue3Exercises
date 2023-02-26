@@ -6,9 +6,8 @@ export default {
 </script>
 
 <template>
-<Ali />
+<Ali name="Ali" surn="Dzelyalov" age="0"/>
 </template>
 
 <style>
 </style>
-
