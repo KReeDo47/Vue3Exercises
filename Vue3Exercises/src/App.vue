@@ -1,36 +1,44 @@
 <script>
 export default{
-data(){
-  return{
-    New: '',
-    anythings: ['1', '2', '3', '4'],
-  }
-},
-<script>
-export default{
-data(){
-return{
-    ballon: '',
-    Ballon: ['Green', 'Wood', 'Grey'],
+data() {
+	return {
+		users: [
+			{
+				id: 1,
+				name: 'name1',
+				salary: 100,
+				age: 30,
+			},
+			{
+				id: 2,
+				name: 'name2',
+				salary: 200,
+				age: 40,
+			},
+			{
+				id: 3,
+				name: 'name3',
+				salary: 300,
+				age: 50,
+			},
+		],
+	}
 }
-},
 methods: {
-removeBallon: function (index) {
-    this.Ballon.splice(index, 1);
+removeItem: function (id) {
+    this.users = this.users.filter((user) => {
+    return user.id !== id;
+    })
 }
 }
 }
 </script>
 
 <template>
-<ul>
-<li v-for="(item, index) in 
-			Ballon" :key="index">
-    {{ item }}
-    <br>
-    <button @click="removeBallon(index)">remove</button>
-</li>
-</ul>
+<table class="one">
+  <tr v-for="user in users" :key="user.id"> {{ user.name }} {{ user.salary }} {{ user.age }} <button class="button" @click="removeItem(users.id)">Remove</button>
+</tr>
+</table>
 </template>
 
 <style>
