@@ -1,5 +1,5 @@
 <script>
-import Ali from './components/Employee.vue'
+import User from './components/Employee.vue'
 export default {
   data() {
     return {
@@ -7,21 +7,21 @@ export default {
     }
   },
   components: {
-    Ali
+    User
   },
   methods: {
-    Ali() {
-      alert('1, 2, 3, 4');
+    UserName(name) {
+      console.log(name);
     },
-    Dzelyalov(){
-      alert('1, 2, 3, 4')
+    UserSalary(name, salary){
+console.log(name, salary);
     }
   }
 }
 </script>
 
 <template>
-<Ali @show="Ali" @show1="Dzelyalov" />
+<User @show="UserName" @show1="UserSalary" />
 </template>
 
 
