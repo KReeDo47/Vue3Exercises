@@ -6,7 +6,7 @@ export default {
 </script>
 
 <template>
-<Ali name="Ali" surn="Dzelyalov" age="0"/>
+<Ali :name="['Ali', 'Ali', 'Ali', 'Ali']"/>
 </template>
 
 <style>
